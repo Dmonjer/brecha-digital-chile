@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía de Presentación Canva - Brecha Digital Chile</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #070d19;
+    --card: #0f1c33;
+    --card-border: #1e335a;
+    --primary: #1a6eff;
+    --cyan: #00d4ff;
+    --green: #00e5a0;
+    --orange: #ff7b35;
+    --text: #f0f4fc;
+    --text-muted: #9ab1d6;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    padding: 30px 20px 80px;
+  }
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px;
+    background: linear-gradient(135deg, #0f1c33 0%, #162a4d 100%);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+  }
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.2rem;
+    color: var(--cyan);
+    margin-bottom: 10px;
+  }
+  .meta {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+  .section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.6rem;
+    color: var(--green);
+    margin: 40px 0 20px;
+    border-bottom: 2px solid var(--card-border);
+    padding-bottom: 8px;
+  }
+  .slide-card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 26px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  .slide-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 10px;
+  }
+  .slide-number {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--cyan);
+  }
+  .slide-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  .content-box {
+    background: rgba(0,0,0,0.25);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 12px 0;
+  }
+  .content-box h4 {
+    color: var(--orange);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+  .speech-box {
+    background: rgba(26, 110, 255, 0.12);
+    border-left: 4px solid var(--primary);
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin-top: 14px;
+    font-style: italic;
+    color: #dbe7fa;
+  }
+  .speech-box strong {
+    color: var(--cyan);
+    font-style: normal;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .figure-preview {
+    margin: 15px 0;
+    text-align: center;
+  }
+  .figure-preview img {
+    max-width: 100%;
+    max-height: 380px;
+    border-radius: 8px;
+    border: 1px solid var(--card-border);
+    background: #fff;
+  }
+  .badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: rgba(0, 212, 255, 0.15);
+    color: var(--cyan);
+  }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+  }
+  th, td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--card-border);
+  }
+  th { color: var(--cyan); }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <span class="badge">PROYECTO DATA SCIENCE 2026</span>
+    <h1 style="margin-top: 10px;">Guía y Guión para Presentación en Canva</h1>
+    <p class="meta"><strong>Análisis de la Brecha Digital y Calidad de Red en Chile</strong><br>
+    Diego Lara · Cristóbal Castillo | Profesor: Jorge Rozas (UDP)</p>
+  </header>
+
+  <h2 class="section-title">📊 1. Justificación y Explicación Metodológica</h2>
+  <div class="slide-card">
+    <div class="content-box">
+      <h4>¿Por qué se eligieron estas bases de datos?</h4>
+      <ul>
+        <li><strong>SUBTEL (Internet Fija 2024-2025):</strong> Es la fuente oficial técnica del Estado. Mide la infraestructura real de telecomunicaciones a nivel comunal.</li>
+        <li><strong>INE (Proyecciones de Población):</strong> Normaliza el dato absoluto. 1.000 conexiones en una comuna pequeña representan alta cobertura, pero en una gran urbe son insignificantes. Nos da la métrica: <em>conexiones por cada 1.000 habitantes</em>.</li>
+        <li><strong>CASEN 2022 (Ministerio de Desarrollo Social):</strong> Incorpora los determinantes socioeconómicos estructurales (pobreza por ingresos, pobreza multidimensional e ingresos per cápita).</li>
+      </ul>
+    </div>
+
+    <div class="content-box">
+      <h4>¿Qué se hizo en la limpieza de datos y por qué?</h4>
+      <ul>
+        <li><strong>De 367 a 346 comunas oficiales:</strong> Los reportes históricos arrastraban duplicados administrativos por la creación de la Región de Ñuble. Se deduplicó por Código Único Territorial (CUT).</li>
+        <li><strong>Normalización de texto:</strong> Homogeneización de nombres con tildes y caracteres especiales (ej: "Llaillay" vs "Llay-Llay", "Aysén" vs "Aisén") para no perder filas en el cruce.</li>
+        <li><strong>Imputación y Winsorización:</strong> Se imputaron valores faltantes mediante la mediana regional y se truncaron percentiles extremos (1%-99%) para que valores atípicos no sesgaran los centroides de los modelos.</li>
+      </ul>
+    </div>
+
+    <div class="content-box">
+      <h4>¿Cómo funcionan los modelos y qué hace concretamente cada uno?</h4>
+      <ul>
+        <li><strong>K-Means (No Supervisado):</strong> Agrupa las comunas en clusters calculando distancias euclidianas a centroides iterativos. Se determinó <strong>k=3</strong> como óptimo mediante el método de Silhouette (pico de 0.338). <em>¿Qué hace?</em> Crea objetivamente los 3 perfiles de vulnerabilidad comunal (Alta, Media y Baja).</li>
+        <li><strong>Regresión Logística Multinomial (Supervisado Lineal):</strong> Modela la probabilidad de que una comuna pertenezca a cada perfil usando funciones Softmax. Sirve como base lineal de comparación (Baseline). Logró un F1-Score de <strong>0.940</strong>.</li>
+        <li><strong>Random Forest (Supervisado de Ensamble):</strong> Entrena 200 árboles de decisión con subconjuntos aleatorios de comunas y variables (Bagging). Captura relaciones no lineales complejas. Logró una precisión global de <strong>97.1%</strong> (F1-score 0.971), cometiendo solo 2 errores en todo el conjunto de prueba.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="section-title">🖥️ 2. Diapositivas para Canva (Lámina por Lámina)</h2>
+
+  <!-- Diapositiva 1 -->
+  <div class="slide-card">
+    <div class="slide-header">
+      <span class="slide-number">Lámina 1</span>
+      <span class="slide-title">Portada</span>
+    </div>
+    <div class="content-box">
+      <h4>Qué poner en Canva:</h4>
+      <ul>
+        <li><strong>Título:</strong> Brecha Digital y Calidad de Red en Chile</li>
+        <li><strong>Subtítulo:</strong> Segmentación comunal y modelado predictivo mediante Machine Learning</li>
+        <li><strong>Integrantes:</strong> Diego Lara · Cristóbal Castillo | Profesor: Jorge Rozas | Data Science 2026</li>
+      </ul>
+    </div>
+    <div class="speech-box">
+      <strong>🎙️ Guión oral para exponer:</strong>
+      "Buenas tardes profesor y compañeros. Hoy presentaremos nuestro proyecto de ciencia de datos enfocado en la Brecha Digital en Chile. Nuestro objetivo fue cuantificar la desigualdad digital a nivel comunal e integrar técnicas no supervisadas y supervisadas de Machine Learning para caracterizar y predecir la vulnerabilidad digital de las 346 comunas del país."
+    </div>
+  </div>
+
+  <!-- Diapositiva 2 -->
+  <div class="slide-card">
+    <div class="slide-header">
+      <span class="slide-number">Lámina 2</span>
+      <span class="slide-title">Contexto y Pregunta de Investigación</span>
+    </div>
+    <div class="content-box">
+      <h4>Qué poner en Canva:</h4>
+      <ul>
+        <li>El acceso a internet es hoy un derecho habilitante fundamental (salud, educación, empleo).</li>
+        <li>Existe una fractura territorial evidente entre centros urbanos y zonas rurales.</li>
+        <li><strong>Pregunta central:</strong> ¿Qué factores socioeconómicos explican la brecha digital en Chile, y es posible predecir el perfil de vulnerabilidad de una comuna a partir de sus variables estructurales?</li>
+      </ul>
+    </div>
+    <div class="speech-box">
+      <strong>🎙️ Guión oral para exponer:</strong>
+      "En Chile existen realidades comunales extremas: mientras comunas de altos ingresos superan las 300 conexiones por cada mil habitantes, en zonas rurales o cordilleranas no llegan a 30. Nos planteamos modelar estadísticamente qué factores determinan esta brecha y construir un clasificador capaz de predecir la vulnerabilidad de cada municipio."
+    </div>
+  </div>
+
+  <!-- Diapositiva 3 -->
+  <div class="slide-card">
+    <div class="slide-header">
+      <span class="slide-number">Lámina 3</span>
+      <span class="slide-title">Integración de Fuentes Oficiales</span>
+    </div>
+    <div class="content-box">
+      <h4>Qué poner en Canva:</h4>
+      <ul>
+        <li><strong>SUBTEL:</strong> Estadísticas oficiales de conexiones fijas a internet por comuna.</li>
+        <li><strong>INE:</strong> Proyecciones demográficas para normalizar conexiones por cada 1.000 habitantes.</li>
+        <li><strong>CASEN 2022:</strong> Pobreza multidimensional, pobreza por ingresos e ingreso promedio comunal.</li>
+      </ul>
+    </div>
+    <div class="speech-box">
+      <strong>🎙️ Guión oral para exponer:</strong>
+      "Combinamos tres fuentes oficiales porque la brecha digital es un fenómeno socio-técnico. SUBTEL nos da la métrica de telecomunicaciones; el INE nos permite normalizar los números absolutos respecto a la población real para que comunas pequeñas sean comparables con grandes urbes; y CASEN nos entrega el contexto de vulnerabilidad socioeconómica."
+    </div>
+  </div>
+
+  <!-- Diapositiva 4 -->
+  <div class="slide-card">
+    <div class="slide-header">
+      <span class="slide-number">Lámina 4</span>
+      <span class="slide-title">Limpieza y Pipeline de Datos</span>
+    </div>
+    <div class="content-box">
+      <h4>Qué poner en Canva:</h4>
+      <ul>
+        <li><strong>Deduplicación territorial:</strong> Reducción de 367 a las 346 comunas oficiales de Chile (corrección de duplicados de la Región de Ñuble).</li>
+        <li><strong>Normalización de llaves:</strong> Estandarización de Códigos Únicos Territoriales (CUT) y nombres comunales.</li>
+        <li><strong>Tratamiento de valores extremos:</strong> Winsorización (percentiles 1-99) e imputación regional.</li>
+        <li><strong>Feature Engineering:</strong> Tasa de conexiones por cada 1.000 habitantes.</li>
+      </ul>
+    </div>
+    <div class="speech-box">
+      <strong>🎙️ Guión oral para exponer:</strong>
+      "En la limpieza de datos eliminamos los registros duplicados de la transición de Ñuble para llegar al 100% de las 346 comunas oficiales. Normalizamos los nombres comunales mediante códigos CUT y aplicamos winsorización para evitar que comunas minúsculas distorsionaran las escalas."
+    </div>
+  </div>
+
+  <!-- Diapositiva 5 -->
+  <div class="slide-card">
+    <div class="slide-header">
+      <span class="slide-number">Lámina 5</span>
+      <span class="slide-title">Análisis Exploratorio de Datos (EDA)</span>
+    </div>
+    <div class="figure-preview">
+      <img src="figures/01_distribuciones.png" alt="Distribuciones" onerror="this.src='../outputs/figures/01_distribuciones.png'">
+    </div>
+    <div class="content-box">
+      <h4>Hallazgos clave:</h4>
+      <ul>
+        <li>Marcada asimetría en conexiones: el 70% de las comunas está bajo el promedio nacional.</li>
+        <li>Correlación negativa entre pobreza/ruralidad y conectividad (r ≈ -0.55).</li>
+        <li>Correlación positiva robusta entre ingresos per cápita y conectividad (r ≈ +0.62).</li>
+      </ul>
+    </div>
+    <div class="speech-box">
+      <strong>🎙️ Guión oral para exponer:</strong>
+      "Como se aprecia en el histograma, la infraestructura está fuertemente concentrada: más del 70% de los municipios chilenos presenta baja penetración de internet fija. El análisis de correlación confirma que la pobreza multidimensional y el aislamiento rural son los principales frenos al despliegue digital."
+    </div>
+  </div>
+
+  <!-- Diapositiva 6 y 7 -->
+  <div class="slide-card">
+    <div class="slide-header">
+      <span class="slide-number">Lámina 6 & 7</span>
+      <span class="slide-title">Clustering con K-Means (k=3)</span>
+    </div>
+    <div class="figure-preview">
+      <img src="figures/05_elbow_silhouette.png" alt="Elbow y Silhouette" onerror="this.src='../outputs/figures/05_elbow_silhouette.png'">
+    </div>
+    <div class="content-box">
+      <h4>Metodología y Selección:</h4>
+      <ul>
+        <li>Algoritmo no supervisado para agrupar comunas minimizando la inercia interna.</li>
+        <li>Variables escaladas con Z-Score para evitar sesgos de magnitud.</li>
+        <li><strong>Punto óptimo k=3:</strong> Máximo coeficiente de silueta global (**0.338**).</li>
+      </ul>
+    </div>
+    <div class="speech-box">
+      <strong>🎙️ Guión oral para exponer:</strong>
+      "Para generar los perfiles sin sesgo humano usamos K-Means. Evaluamos de 2 a 8 grupos y la métrica de Silueta arrojó su punto más alto en k=3 con 0.338. Esto divide al país en 3 realidades de gestión muy claras para la política pública."
+    </div>
+  </div>
+
+  <!-- Diapositiva 8 -->
+  <div class="slide-card">
+    <div class="slide-header">
+      <span class="slide-number">Lámina 8</span>
+      <span class="slide-title">Perfiles de Vulnerabilidad Digital</span>
+    </div>
+    <div class="figure-preview">
+      <img src="figures/06_clusters_pca_heatmap.png" alt="Clusters PCA Heatmap" onerror="this.src='../outputs/figures/06_clusters_pca_heatmap.png'">
+    </div>
+    <div class="content-box">
+      <table>
+        <tr>
+          <th>Perfil</th>
+          <th>N° Comunas</th>
+          <th>% País</th>
+          <th>Conectividad Promedio</th>
+        </tr>
+        <tr>
+          <td>🔴 Alta Vulnerabilidad</td>
+          <td>151</td>
+          <td>43.6%</td>
+          <td>~78 conex / 1.000 hab (Rural, alta pobreza)</td>
+        </tr>
+        <tr>
+          <td>🟡 Vulnerabilidad Media</td>
+          <td>148</td>
+          <td>42.8%</td>
+          <td>~180 conex / 1.000 hab (Ciudades intermedias)</td>
+        </tr>
+        <tr>
+          <td>🟢 Baja Vulnerabilidad</td>
+          <td>47</td>
+          <td>13.6%</td>
+          <td>~258 conex / 1.000 hab (Metrópolis de altos ingresos)</td>
+        </tr>
+      </table>
+    </div>
+    <div class="speech-box">
+      <strong>🎙️ Guión oral para exponer:</strong>
+      "En el gráfico PCA se visualiza la separación de los clusters. Casi un 44% de las comunas chilenas (151 comunas) cae en el cluster de alta vulnerabilidad. El grupo privilegiado de baja vulnerabilidad representa apenas un 13.6%, demostrando la enorme centralización del acceso."
+    </div>
+  </div>
+
+  <!-- Diapositiva 9 y 10 -->
+  <div class="slide-card">
+    <div class="slide-header">
+      <span class="slide-number">Lámina 9 & 10</span>
+      <span class="slide-title">Modelado Predictivo Supervisado</span>
+    </div>
+    <div class="content-box">
+      <h4>Estrategia Metodológica:</h4>
+      <ul>
+        <li><strong>División Estratificada:</strong> 80% Entrenamiento (276 comunas) / 20% Prueba (70 comunas).</li>
+        <li><strong>Pipeline scikit-learn:</strong> Escalado ajustado estrictamente en Train para evitar Data Leakage.</li>
+        <li><strong>Regresión Logística Multinomial:</strong> Modelo lineal base interpretable con función Softmax.</li>
+        <li><strong>Random Forest:</strong> Ensamble de 200 árboles de decisión que captura no linealidades complejas.</li>
+      </ul>
+    </div>
+    <div class="speech-box">
+      <strong>🎙️ Guión oral para exponer:</strong>
+      "Una vez generadas las etiquetas con K-Means, entrenamos clasificadores supervisados. Usamos scikit-learn Pipelines para garantizar rigor y cero fuga de información. Comparamos un modelo lineal interpretable como la Regresión Logística frente a un ensamble no lineal como Random Forest."
+    </div>
+  </div>
+
+  <!-- Diapositiva 11 -->
+  <div class="slide-card">
+    <div class="slide-header">
+      <span class="slide-number">Lámina 11</span>
+      <span class="slide-title">Evaluación y Comparación de Modelos</span>
+    </div>
+    <div class="figure-preview">
+      <img src="figures/07_confusion_matrices.png" alt="Matrices de Confusión" onerror="this.src='../outputs/figures/07_confusion_matrices.png'">
+    </div>
+    <div class="content-box">
+      <table>
+        <tr>
+          <th>Modelo</th>
+          <th>Accuracy</th>
+          <th>Precision Macro</th>
+          <th>Recall Macro</th>
+          <th>F1-Score</th>
+        </tr>
+        <tr>
+          <td>Regresión Logística</td>
+          <td>94.3%</td>
+          <td>0.940</td>
+          <td>0.941</td>
+          <td>0.940</td>
+        </tr>
+        <tr>
+          <td><strong>Random Forest</strong></td>
+          <td><strong>97.1%</strong></td>
+          <td><strong>0.973</strong></td>
+          <td><strong>0.970</strong></td>
+          <td><strong>0.971</strong></td>
+        </tr>
+      </table>
+    </div>
+    <div class="speech-box">
+      <strong>🎙️ Guión oral para exponer:</strong>
+      "Random Forest superó a la regresión lineal alcanzando un 97.1% de F1-Score. En el conjunto de prueba de 70 comunas, cometió únicamente 2 errores entre vulnerabilidad media y alta, demostrando una altísima capacidad de generalización."
+    </div>
+  </div>
+
+  <!-- Diapositiva 12 -->
+  <div class="slide-card">
+    <div class="slide-header">
+      <span class="slide-number">Lámina 12</span>
+      <span class="slide-title">Importancia de Variables (Feature Importance)</span>
+    </div>
+    <div class="figure-preview">
+      <img src="figures/08_feature_importance.png" alt="Feature Importance" onerror="this.src='../outputs/figures/08_feature_importance.png'">
+    </div>
+    <div class="content-box">
+      <h4>Top Variables Determinantes:</h4>
+      <ul>
+        <li>1. <strong>Conexiones fijas por 1.000 hab:</strong> 38% del peso explicativo.</li>
+        <li>2. <strong>Ingreso promedio comunal:</strong> 24% del peso.</li>
+        <li>3. <strong>Porcentaje de ruralidad:</strong> 18% del peso.</li>
+        <li>4. <strong>Pobreza multidimensional:</strong> 12% del peso.</li>
+      </ul>
+    </div>
+    <div class="speech-box">
+      <strong>🎙️ Guión oral para exponer:</strong>
+      "El análisis de importancia de variables demuestra empíricamente que la penetración de internet fija y el ingreso explican más del 60% de la vulnerabilidad digital. La ruralidad es el tercer factor clave, ratificando que el aislamiento geográfico es la principal barrera estructural."
+    </div>
+  </div>
+
+  <!-- Diapositiva 13 y 14 -->
+  <div class="slide-card">
+    <div class="slide-header">
+      <span class="slide-number">Lámina 13 & 14</span>
+      <span class="slide-title">Conclusiones y Recomendaciones</span>
+    </div>
+    <div class="content-box">
+      <h4>Impacto y Propuestas de Política Pública:</h4>
+      <ul>
+        <li><strong>Focalización Prioritaria:</strong> Concentrar subsidios e inversión estatal en las 151 comunas críticas del Cluster 1.</li>
+        <li><strong>Tecnologías Híbridas:</strong> Complementar fibra óptica con conectividad satelital y 5G en áreas remotas.</li>
+        <li><strong>Alfabetización Digital:</strong> Acompañar el despliegue técnico con programas de capacitación para la población vulnerable.</li>
+      </ul>
+    </div>
+    <div class="speech-box">
+      <strong>🎙️ Guión oral para exponer:</strong>
+      "Para concluir, este modelo entrega una herramienta cuantitativa aplicable para SUBTEL y el Ministerio de Desarrollo Social para focalizar subsidios de última milla. Muchas gracias por su atención, quedamos abiertos a preguntas."
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

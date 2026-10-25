@@ -8,7 +8,7 @@
 
 ## 📌 Descripción del Proyecto
 
-Este proyecto analiza la **brecha digital comunal en Chile** utilizando datos oficiales de SUBTEL, INE y CASEN 2022. Aplicamos técnicas de clustering no supervisado (K-Means) y clasificación supervisada (Regresión Logística + Random Forest) para segmentar las 367 comunas del país según su nivel de vulnerabilidad digital.
+Este proyecto analiza la **brecha digital comunal en Chile** utilizando datos oficiales de SUBTEL, INE y CASEN 2022. Aplicamos técnicas de clustering no supervisado (K-Means) y clasificación supervisada (Regresión Logística + Random Forest) para segmentar las 346 comunas (100% oficial) del país según su nivel de vulnerabilidad digital.
 
 **Pregunta de investigación:**  
 > *¿Qué factores socioeconómicos y demográficos explican la brecha digital entre comunas de Chile, y es posible predecir el perfil de vulnerabilidad digital de una comuna?*
@@ -19,20 +19,20 @@ Este proyecto analiza la **brecha digital comunal en Chile** utilizando datos of
 
 | Indicador | Valor |
 |-----------|-------|
-| Comunas analizadas | **367** |
+| Comunas analizadas | **346** |
 | Variables del dataset | **13** |
 | Clusters K-Means (k óptimo) | **3** |
-| Silhouette Score | **0.437** |
-| Accuracy Random Forest | **98.7%** |
-| F1-Score Random Forest | **0.986** |
+| Silhouette Score | **0.338** |
+| Accuracy Random Forest | **97.1%** |
+| F1-Score Random Forest | **0.971** |
 
 ### Perfiles de Vulnerabilidad Digital
 
 | Perfil | N° Comunas | % | Descripción |
 |--------|-----------|---|-------------|
-| 🔴 Alta Vulnerabilidad | 263 | 71.7% | Rural, baja conectividad, alta pobreza |
-| 🟠 Vulnerabilidad Media | 91 | 24.8% | Urbanas medianas, conectividad moderada |
-| 🟢 Baja Vulnerabilidad | 13 | 3.5% | Alta conectividad, menor pobreza |
+| 🔴 Alta Vulnerabilidad | 151 | 43.6% | Rural, baja conectividad (~78 conex/1.000 hab), mayor pobreza |
+| 🟠 Vulnerabilidad Media | 148 | 42.8% | Ciudades intermedias, conectividad moderada (~180 conex/1.000 hab) |
+| 🟢 Baja Vulnerabilidad | 47 | 13.6% | Grandes urbes, alta conectividad (~258 conex/1.000 hab), menor pobreza |
 
 ---
 
@@ -141,7 +141,7 @@ python src/modelado.py         # Genera outputs/figures/ y outputs/models/
 El proyecto sigue el framework **CRISP-DM**:
 
 1. **Comprensión del negocio** → Brecha digital como problema de inequidad
-2. **Comprensión de datos** → EDA con 367 comunas × 13 variables
+2. **Comprensión de datos** → EDA con 346 comunas (100% oficial) × 13 variables
 3. **Preparación** → Limpieza, merge por CUT, imputación mediana, winsorización p1-p99
 4. **Modelado** → K-Means (k=3) + Reg. Logística + Random Forest
 5. **Evaluación** → Silhouette=0.437 | Accuracy RF=98.7%
