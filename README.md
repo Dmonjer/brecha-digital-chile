@@ -46,7 +46,8 @@ En la **Etapa 3**, el estudio se enfoca en las 105 comunas de la **Macrozona Cen
 proyecto-brecha-digital/
 │
 ├── notebooks/
-│   └── etapa2_brecha_digital_chile.ipynb   ← Notebook principal reproducible
+│   ├── etapa3_brecha_digital_chile.ipynb   ← Notebook oficial Etapa 3 (ejecutado y reproducible)
+│   └── etapa2_brecha_digital_chile.ipynb   ← Notebook preliminar Etapa 2 (histórico)
 │
 ├── src/
 │   ├── preparar_datos.py     ← Extracción SUBTEL (fija + antenas móviles), INE, CASEN y merge
