@@ -87,7 +87,7 @@ def descargar_archivo(url, destino, descripcion="", reintentos=3, timeout=60):
     
     for intento in range(1, reintentos + 1):
         try:
-            print(f"  📥 Descargando: {descripcion or url}")
+            print(f"  Descargando: {descripcion or url}")
             print(f"     Intento {intento}/{reintentos}...")
             
             response = requests.get(url, headers=headers, timeout=timeout, stream=True)
@@ -130,7 +130,7 @@ def main():
     fallidas = 0
     
     # SUBTEL
-    print("\n📡 Descargando datos SUBTEL...")
+    print("\nDescargando datos SUBTEL...")
     for archivo in ARCHIVOS_SUBTEL:
         destino = DATA_SUBTEL / archivo["nombre"]
         if destino.exists():
